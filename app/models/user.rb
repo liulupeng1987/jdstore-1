@@ -5,7 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :orders
-  
+  has_many :reviews, dependent: :destroy              #商品留言关系，dependent: :destroy表示联级删除
+
   def admin?
     (role == "admin")
   end

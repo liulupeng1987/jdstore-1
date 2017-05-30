@@ -294,3 +294,31 @@
     max-width:100%;height:auto;             //重要样式代码，需要配合application.js的自适应代码块一起使用
     }
 }
+
+//leo-商品评论区的样式
+
+// 商品品论区域样式
+.review-comment-form {
+  text-align: left;
+  padding: 2em 2em;
+}
+.review-comment-button {
+  text-align: left;
+  padding: 0 2em;
+  margin-top: -2em;
+}
+.reviews {
+  text-align: left;
+  li {
+    list-style: none;
+  }
+}
+.review-user-email {
+  font-weight: bold;
+}
+.review-comment {
+  margin: 1em auto;
+}
+.review-hr {
+  padding: 0 3em;
+}

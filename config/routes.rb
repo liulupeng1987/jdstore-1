@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     end
   end
 
+
+
   namespace :account do
     resources :orders
   end
@@ -27,6 +29,7 @@ Rails.application.routes.draw do
     member do
       post :add_to_cart
     end
+    resources :reviews
   end
 
   namespace :admin do
