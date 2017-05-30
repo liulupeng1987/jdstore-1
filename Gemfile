@@ -37,11 +37,11 @@ gem 'will_paginate'
 gem 'faker'
 gem 'figaro'
 gem 'fog'
-gem 'pry'
-# Summernote gem
-gem 'summernote-rails'
-gem "refile", require: "refile/rails", github: 'manfe/refile'
-gem "refile-mini_magick"
+
+# product details rich text editor gem
+gem 'bootstrap-wysihtml5-rails'
+
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -61,6 +61,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'sqlite3'
   gem 'awesome_rails_console'
+  gem 'pry'
 end
 
 group :development do
