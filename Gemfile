@@ -43,6 +43,8 @@ gem 'jquery-ui-rails' # 在后台实现通过拖拽就能调整产品的顺序
 # product details rich text editor gem
 gem 'bootstrap-wysihtml5-rails'
 
+gem "intercom-rails" # 客服功能gem
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
