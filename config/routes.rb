@@ -33,7 +33,11 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-    resources :products
+    resources :products do
+      member do
+        post :reorder
+      end
+    end
     resources :orders do
       member do
         post :cancel

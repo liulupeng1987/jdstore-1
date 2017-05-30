@@ -7,7 +7,7 @@ class Admin::ProductsController < ApplicationController
 
   # ---CRUD---
   def index
-    @products = Product.all
+    @products = Product.rank(:row_order).all
   end
 
   def show
@@ -64,6 +64,14 @@ class Admin::ProductsController < ApplicationController
       @product.photos.destroy_all
     end
     @product.destroy
+
+    redirect_to admin_products_path
+  end
+
+  def reorder
+    @product = Product.find_by_friendly_id!(params[:id])
+    @product.row_order_position = params[:position]
+    @product.save!
 
     redirect_to admin_products_path
   end

@@ -37,6 +37,8 @@ gem 'will_paginate'
 gem 'faker'
 gem 'figaro'
 gem 'fog'
+gem 'ranked-model' # 在后台对产品进行顺序调整的gem
+gem 'jquery-ui-rails' # 在后台实现通过拖拽就能调整产品的顺序
 
 # product details rich text editor gem
 gem 'bootstrap-wysihtml5-rails'
