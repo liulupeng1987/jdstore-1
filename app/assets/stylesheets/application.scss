@@ -1,6 +1,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+@import "bootstrap-wysihtml5/bootstrap3-wysihtml5";                       //文本编辑器的支持样式
+@import url('https://fonts.googleapis.com/earlyaccess/notosanssc.css');   //引入google思源黑简在线字体
 
 
 //position of products in the center of products/index page
@@ -274,3 +276,21 @@
         width: 32px; //定制图片宽度
         height: 32px; //定制图片高度
     }
+
+
+
+//leo-商品详情区域样式
+.product-detail {
+  margin: 1.1em 0 3em;
+}
+.product-detail-box {
+  border: 1px solid #e3e3e3;
+  border-top: none;
+  padding: 2em 1.2em;
+  letter-spacing: 0.1em;
+  text-align: center;
+  line-height: 1.6em;
+  img {
+    max-width:100%;height:auto;             //重要样式代码，需要配合application.js的自适应代码块一起使用
+    }
+}
