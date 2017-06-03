@@ -10,6 +10,10 @@
           </div>
 
           <div class="group">
+            <%= f.input :category_id, label: "分类", required: true, as: :select, collection: @categories %>
+          </div>
+
+          <div class="group">
             <%= f.input :description, :label => "商品简述" %>
           </div>
 
@@ -30,7 +34,7 @@
           <div class="group">
             <%= f.input :detail, as: :wysihtml5, :label => "商品详情" %>
           </div>
-          
+
           <%= f.submit "Submit", data: { disable_with: "Submitting..." }, :class => "btn btn-primary" %>
 
         <% end %>

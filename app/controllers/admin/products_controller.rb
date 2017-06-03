@@ -17,10 +17,12 @@ class Admin::ProductsController < ApplicationController
   def new
     @product = Product.new
     @photo = @product.photos.build
+    @categories = Category.all.map { |c| [c.name, c.id] }
   end
 
   def create
     @product = Product.new(product_params)
+    @product.category_id = params[:category_id]
 
     if @product.save
       if params[:photos] != nil
@@ -36,10 +38,12 @@ class Admin::ProductsController < ApplicationController
 
   def edit
     @product = Product.find(params[:id])
+    @categories = Category.all.map{ |c| [c.name, c.id]}
   end
 
   def update
     @product = Product.find(params[:id])
+    @product.category_id = params[:category_id]
 
     if params[:photos] != nil
       @product.photos.destroy_all
@@ -79,7 +83,7 @@ class Admin::ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:title, :description, :quantity, :price, :image, :detail)
+    params.require(:product).permit(:title, :category_id, :description, :quantity, :price, :image, :detail)
   end
 
 end
