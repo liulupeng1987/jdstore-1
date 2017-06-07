@@ -1,0 +1,33 @@
+<div class="my-content-raised main admin-categories">
+  <div class="container-fluid">
+    <div class="page-header">
+      <h3>分类
+        <%= link_to fa_icon("plus", text: "新增"), new_admin_category_path, class: "btn btn-raised btn-success pull-right" %>
+      </h3>
+    </div>
+    <div class="panel panel-default">
+      <table class="table table-shopping">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th width="60%">名称</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @categories.each do |category| %>
+          <tr>
+            <td><%= category.id %></td>
+            <td><%= category.name %></td>
+            <td>
+              <%= link_to("编辑", edit_admin_category_path(category)) %>
+              <%= link_to("删除", admin_category_path(category), :method => :delete, :data => { :confirm => "Are you sure?" }) %>
+
+            </td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

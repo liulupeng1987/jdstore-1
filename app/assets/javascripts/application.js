@@ -17,6 +17,7 @@
 //= require materialize-sprockets
 
 
+
 // 图片自适应大小支持代码块
 // 在product/show.html.erb的页面中，对img图片用这一格式进行校正
 // 让图片在大于div宽度时自动缩小不而溢出，确保版面的公正和美观

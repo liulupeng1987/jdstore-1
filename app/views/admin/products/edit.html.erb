@@ -12,6 +12,10 @@
         </div>
 
         <div class="group">
+          <%= f.input :category_id, label: "分类", required: true, as: :select, collection: @categories %>
+        </div>
+
+        <div class="group">
           <%= f.input :description, :label => "商品简述" %>
         </div>
 
@@ -46,3 +50,7 @@
     </div>
   </div>
 </div>
+
+<script>
+autosize( $("#product_description") );
+</script>
