@@ -23,7 +23,10 @@ gem 'coffee-rails', '~> 4.2'
 
 gem 'devise'
 
-gem 'bootstrap-sass'
+
+# gem 'bootstrap-sass'
+gem 'materialize-sass'
+
 gem 'font-awesome-rails'
 
 gem 'simple_form'
@@ -41,7 +44,7 @@ gem 'ranked-model' # 在后台对产品进行顺序调整的gem
 gem 'jquery-ui-rails' # 在后台实现通过拖拽就能调整产品的顺序
 
 # product details rich text editor gem
-gem 'bootstrap-wysihtml5-rails'
+# gem 'bootstrap-wysihtml5-rails'
 
 gem "intercom-rails" # 客服功能gem
 

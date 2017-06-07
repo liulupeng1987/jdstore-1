@@ -13,14 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require bootstrap/alert
-//= require bootstrap/dropdown
-//= require bootstrap-sprockets
-//= require bootstrap/collapse
-//= require bootstrap-wysihtml5
-//= require bootstrap-wysihtml5/locales/zh-CN
 //= require jquery-ui
-
+//= require materialize-sprockets
 
 
 // 图片自适应大小支持代码块
@@ -51,4 +45,14 @@ $(document).on('mouseover', '.magnifier-thumb-wrapper', function (e) {
 })
 $(document).on('mouseout', '.magnifier-thumb-wrapper', function (e) {
     $('#preview').css('visibility', 'hidden')
+})
+
+
+
+$(window).scroll(function () {                            //指的是当屏幕滚动时，所触发的功能
+    if ($(this).scrollTop() > 125) {                      //指的是当屏幕滚动到125px的高度时，所触发的行为
+        $('#navbar').addClass('show_bgcolor')             //指的是抓取ID为navbar的物件，并加入名为show_bgcolor的CSS属性
+    } else {
+        $('#navbar').removeClass('show_bgcolor')
+    }
 })
