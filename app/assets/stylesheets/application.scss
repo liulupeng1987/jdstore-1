@@ -1,8 +1,14 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
+// @import "bootstrap-sprockets";
+// @import "bootstrap";
 @import "font-awesome";
-@import "bootstrap-wysihtml5/bootstrap3-wysihtml5";                       //文本编辑器的支持样式
-
+// @import "bootstrap-wysihtml5/bootstrap3-wysihtml5";                       //文本编辑器的支持样式
+@import url('https://fonts.googleapis.com/earlyaccess/notosanssc.css');   //引入google思源黑简在线字体 需要使用VPN才可生效
+@import "materialize/components/color";
+$primary-color: color("blue", "lighten-2") !default;
+$secondary-color: color("yellow", "base") !default;
+@import 'materialize';
+@import "materialize/extras/nouislider";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
 
 
 //position of products in the center of products/index page
@@ -60,221 +66,230 @@
    padding: 0;
  }
 
- //home page banner text
- .banner-text {
-   font-size: 180%;
- }
-
-
-
-  body,
-  html {
-      width: 100%;
-      height: 100%;
-  }
-
-  body,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-      font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
-      font-weight: 700;
-  }
-
-  .topnav {
-      font-size: 14px;
-  }
-
-  .lead {
-      font-size: 18px;
-      font-weight: 400;
-  }
-
-  .intro-header {
-      padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-      padding-bottom: 50px;
-      text-align: center;
-      color: #f8f8f8;
-      background: url("https://ws4.sinaimg.cn/large/006tKfTcgy1fg1ds1rof9j30zk0mjjum.jpg") no-repeat center center;
-      background-size: cover;
-  }
-
-  .intro-message {
-      position: relative;
-      padding-top: 4%;
-  }
-
-  .intro-message > h1 {
-      margin: 0;
-      text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-      font-size: 5em;
-  }
-
-  .intro-divider {
-      width: 400px;
-      border-top: 1px solid #f8f8f8;
-      border-bottom: 1px solid rgba(0,0,0,0.2);
-  }
-
-  .intro-message > h3 {
-      text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-  }
-
-  @media(max-width:767px) {
-      .intro-message {
-          padding-bottom: 15%;
-      }
-
-      .intro-message > h1 {
-          font-size: 3em;
-      }
-
-      ul.intro-social-buttons > li {
-          display: block;
-          margin-bottom: 20px;
-          padding: 0;
-      }
-
-      ul.intro-social-buttons > li:last-child {
-          margin-bottom: 0;
-      }
-
-      .intro-divider {
-          width: 100%;
-      }
-  }
-
-  .network-name {
-      text-transform: uppercase;
-      font-size: 14px;
-      font-weight: 400;
-      letter-spacing: 2px;
-  }
-
-  .content-section-a {
-      padding: 50px 0;
-      background-color: #f8f8f8;
-  }
-
-  .content-section-b {
-      padding: 50px 0;
-      border-top: 1px solid #e7e7e7;
-      border-bottom: 1px solid #e7e7e7;
-  }
-
-  .section-heading {
-      margin-bottom: 30px;
-  }
-
-  .section-heading-spacer {
-      float: left;
-      width: 200px;
-      border-top: 3px solid #e7e7e7;
-  }
-
-  .banner {
-      padding: 100px 0;
-      color: #f8f8f8;
-      background: url("https://ws2.sinaimg.cn/large/006tNbRwgy1ffz4c8jzudj31hc0gogu8.jpg") no-repeat center center;
-      background-size: cover;
-  }
-
-  .banner h2 {
-      margin: 0;
-      text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-      font-size: 3em;
-  }
-
-  .banner ul {
-      margin-bottom: 0;
-  }
-
-  .banner-social-buttons {
-      float: right;
-      margin-top: 0;
-  }
-
-  @media(max-width:1199px) {
-      ul.banner-social-buttons {
-          float: left;
-          margin-top: 15px;
-      }
-  }
-
-  @media(max-width:767px) {
-      .banner h2 {
-          margin: 0;
-          text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-          font-size: 3em;
-      }
-
-      ul.banner-social-buttons > li {
-          display: block;
-          margin-bottom: 20px;
-          padding: 0;
-      }
-
-      ul.banner-social-buttons > li:last-child {
-          margin-bottom: 0;
-      }
-  }
-
-  /*===== 立即選購按鈕 ======*/
- .buy-box {
-   text-align: center;
-   margin: 50px auto 0 auto;
-   color: #02061A;
-
-
-   .btn-default {
-     margin-top: 30px;
-     padding: 15px 20px 15px 20px;
-   }
-
-   .btn-default:hover,
-   .btn-default:active,
-   .btn-default:focus {
-     background-color: #ef9a9a;
-   }
-
-   .suggested-product-content{
-     text-align: center;
-     margin: 20px 0px 20px 0px;
-
-     img {
-       margin: auto;
-       max-width: 200px;
-     }
-   }
- }
-
- /*===== Button 按钮 =====*/
-  .btn-push {
-    background-color: transparent;
-    color: #ef9a9a;
-    border-color: #ef9a9a;
-    padding: 10px 20px;
-    font-size: 20px;
-  }
-
-  footer {
-      padding: 50px 0;
-      background-color: #f8f8f8;
-  }
-
-  p.copyright {
-      margin: 15px 0 0;
-  }
+ // //home page banner text
+ // .banner-text {
+ //   font-size: 180%;
+ // }
+ //
+ //
+ //
+ //  body,
+ //  html {
+ //      width: 100%;
+ //      height: 100%;
+ //  }
+ //
+ //  body,
+ //  h1,
+ //  h2,
+ //  h3,
+ //  h4,
+ //  h5,
+ //  h6 {
+ //      font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+ //      font-weight: 700;
+ //  }
+ //
+ //  .topnav {
+ //      font-size: 14px;
+ //  }
+ //
+ //  .lead {
+ //      font-size: 18px;
+ //      font-weight: 400;
+ //  }
+ //
+ //  .intro-header {
+ //      padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+ //      padding-bottom: 50px;
+ //      text-align: center;
+ //      color: #f8f8f8;
+ //      background: url("https://ws4.sinaimg.cn/large/006tKfTcgy1fg1ds1rof9j30zk0mjjum.jpg") no-repeat center center;
+ //      background-size: cover;
+ //  }
+ //
+ //  .intro-message {
+ //      position: relative;
+ //      padding-top: 4%;
+ //  }
+ //
+ //  .intro-message > h1 {
+ //      margin: 0;
+ //      text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+ //      font-size: 5em;
+ //  }
+ //
+ //  .intro-divider {
+ //      width: 400px;
+ //      border-top: 1px solid #f8f8f8;
+ //      border-bottom: 1px solid rgba(0,0,0,0.2);
+ //  }
+ //
+ //  .intro-message > h3 {
+ //      text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+ //  }
+ //
+ //  @media(max-width:767px) {
+ //      .intro-message {
+ //          padding-bottom: 15%;
+ //      }
+ //
+ //      .intro-message > h1 {
+ //          font-size: 3em;
+ //      }
+ //
+ //      ul.intro-social-buttons > li {
+ //          display: block;
+ //          margin-bottom: 20px;
+ //          padding: 0;
+ //      }
+ //
+ //      ul.intro-social-buttons > li:last-child {
+ //          margin-bottom: 0;
+ //      }
+ //
+ //      .intro-divider {
+ //          width: 100%;
+ //      }
+ //  }
+ //
+ //  .network-name {
+ //      text-transform: uppercase;
+ //      font-size: 14px;
+ //      font-weight: 400;
+ //      letter-spacing: 2px;
+ //  }
+ //
+ //  .content-section-a {
+ //      padding: 50px 0;
+ //      background-color: #f8f8f8;
+ //  }
+ //
+ //  .content-section-b {
+ //      padding: 50px 0;
+ //      border-top: 1px solid #e7e7e7;
+ //      border-bottom: 1px solid #e7e7e7;
+ //  }
+ //
+ //  .section-heading {
+ //      margin-bottom: 30px;
+ //  }
+ //
+ //  .section-heading-spacer {
+ //      float: left;
+ //      width: 200px;
+ //      border-top: 3px solid #e7e7e7;
+ //  }
+ //
+ //  .banner {
+ //      padding: 100px 0;
+ //      color: #f8f8f8;
+ //      background: url("https://ws2.sinaimg.cn/large/006tNbRwgy1ffz4c8jzudj31hc0gogu8.jpg") no-repeat center center;
+ //      background-size: cover;
+ //  }
+ //
+ //  .banner h2 {
+ //      margin: 0;
+ //      text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+ //      font-size: 3em;
+ //  }
+ //
+ //  .banner ul {
+ //      margin-bottom: 0;
+ //  }
+ //
+ //  .banner-social-buttons {
+ //      float: right;
+ //      margin-top: 0;
+ //  }
+ //
+ //  @media(max-width:1199px) {
+ //      ul.banner-social-buttons {
+ //          float: left;
+ //          margin-top: 15px;
+ //      }
+ //  }
+ //
+ //  @media(max-width:767px) {
+ //      .banner h2 {
+ //          margin: 0;
+ //          text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+ //          font-size: 3em;
+ //      }
+ //
+ //      ul.banner-social-buttons > li {
+ //          display: block;
+ //          margin-bottom: 20px;
+ //          padding: 0;
+ //      }
+ //
+ //      ul.banner-social-buttons > li:last-child {
+ //          margin-bottom: 0;
+ //      }
+ //  }
+ //
+ //  /*===== 立即選購按鈕 ======*/
+ // .buy-box {
+ //   text-align: center;
+ //   margin: 50px auto 0 auto;
+ //   color: #02061A;
+ //
+ //
+ //   .btn-default {
+ //     margin-top: 30px;
+ //     padding: 15px 20px 15px 20px;
+ //   }
+ //
+ //   .btn-default:hover,
+ //   .btn-default:active,
+ //   .btn-default:focus {
+ //     background-color: #ef9a9a;
+ //   }
+ //
+ //   .suggested-product-content{
+ //     text-align: center;
+ //     margin: 20px 0px 20px 0px;
+ //
+ //     img {
+ //       margin: auto;
+ //       max-width: 200px;
+ //     }
+ //   }
+ // }
+ //
+ // /*===== Button 按钮 =====*/
+ //  .btn-push {
+ //    background-color: transparent;
+ //    color: #ef9a9a;
+ //    border-color: #ef9a9a;
+ //    padding: 10px 20px;
+ //    font-size: 20px;
+ //  }
+ //
+ //  footer {
+ //      padding: 50px 0;
+ //      background-color: #f8f8f8;
+ //  }
+ //
+ //  p.copyright {
+ //      margin: 15px 0 0;
+ //  }
 
  /*===== logo 图片样式 =====*/
+ .navbar-brand {
+    position: relative;
+    height: 60px;
+    line-height: 30px;
+    color: inherit;
+    &:hover,
+    &:focus {
+      color: inherit;
+      background-color: transparent;
+    }
+  }
     .navbar-brand > img {
         display: inline-block; //图片和链接文字显示在同一行
-        margin-right: 10px; //图片和链接文字拉开一点距离
-        width: 32px; //定制图片宽度
-        height: 32px; //定制图片高度
+        height: 45px; //定制图片高度
     }
 
 
