@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require jquery-ui
 //= require materialize-sprockets
+//= require ckeditor/init
 
 //carousel 设置
 

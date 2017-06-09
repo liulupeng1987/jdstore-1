@@ -12,7 +12,24 @@
         </div>
 
         <div class="group">
-          <%= f.input :category_id, label: "分类", required: true, as: :select, collection: @categories %>
+          <table>
+            <thead>
+              <tr>
+                <th>分类id</th>
+                <th>分类名称</th>
+              </tr>
+            </thead>
+            <tbody>
+            <% @categories.each do |category| %>
+              <tr>
+                <td><%= category.id %></td>
+                  <td><%= category.name %></td>
+                  </tr>
+                  <% end %>
+            </tbody>
+        </table>
+
+          <%= f.input :category_id, label: "分类", required: true %>
         </div>
 
         <div class="group">
@@ -40,7 +57,7 @@
         </div>
 
         <div class="group">
-          <%= f.input :detail, as: :wysihtml5, :label => "商品详情" %>
+          <%= f.input :detail, as: :ckeditor, :label => "商品详情" %>
         </div>
 
         <%= f.submit "Submit", data: { disable_with: "Submitting..." }, :class => "btn btn-primary" %>

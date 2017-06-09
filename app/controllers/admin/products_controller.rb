@@ -17,7 +17,8 @@ class Admin::ProductsController < ApplicationController
   def new
     @product = Product.new
     @photo = @product.photos.build
-    @categories = Category.all.map { |c| [c.name, c.id] }
+    # @categories = Category.all.map { |c| [c.name, c.id] }
+    @categories = Category.all
   end
 
   def create
@@ -37,7 +38,9 @@ class Admin::ProductsController < ApplicationController
 
   def edit
     @product = Product.find(params[:id])
-    @categories = Category.all.map{ |c| [c.name, c.id]}
+    # @categories = Category.all.map{ |c| [c.name, c.id]}
+    @categories = Category.all
+
   end
 
   def update
