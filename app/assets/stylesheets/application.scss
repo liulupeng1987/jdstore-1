@@ -493,7 +493,7 @@ nav {
     position: relative;
     height: 60px;
     line-height: 30px;
-    color: inherit;
+    color: light-blue accent-4;
     &:hover,
     &:focus {
       color: inherit;
@@ -502,7 +502,7 @@ nav {
   }
     .navbar-brand > img {
         display: inline-block; //图片和链接文字显示在同一行
-        height: 45px; //定制图片高度
+        height: 70px; //定制图片高度
     }
 
 
