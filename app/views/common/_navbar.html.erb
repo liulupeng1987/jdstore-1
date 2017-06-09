@@ -1,108 +1,36 @@
-<!-- Navbar -->
-<nav class="navbar dark navbar-solid-transition">
-  <div class="nav-wrapper">
-    <a href="horizontal-half.html" class="brand-logo"><i class="icon-diamond"></i></a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a class="dropdown-button" href="#!" data-activates="pages" data-constrainWidth="false" data-belowOrigin="true">Pages<i class="material-icons right">arrow_drop_down</i></a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a class="active" href="team.html">Team</a></li>
-      <li><a href="docs/about.html">Docs</a></li>
-      <li><a href="#">Buy Now!</a></li>
-    </ul>
 
-    <ul id="pages" class="dropdown-content">
-      <li><a href="horizontal-half.html">Horizontal Halves</a></li>
-      <li><a href="sierra.html">Zoom Out</a></li>
-      <li><a href="circle-reveal.html">Circle Reveal</a></li>
-      <li><a href="phone-wall.html">Phone Wall</a></li>
-      <li><a href="element-transitions.html">Element Transitions</a></li>
-      <li><a href="basic-elements.html">Basic Elements</a></li>
-      <li><a href="card-shuffle.html">Shuffle</a></li>
-      <li><a href="postcards.html">Postcards</a></li>
-    </ul>
-
-    <a href="#" data-activates="slide-out" class="button-collapse right"><i class="material-icons black-text">menu</i></a>
-  </div>
-</nav>
-<ul id="slide-out" class="side-nav">
-  <li class="no-padding">
-    <ul class="collapsible collapsible-accordion">
-      <li class="bold">
-        <a class="collapsible-header waves-effect waves-teal">Pages</a>
-        <div class="collapsible-body">
-          <ul>
-            <li><a href="horizontal-half.html">Horizontal Halves</a></li>
-            <li><a href="sierra.html">Zoom Out</a></li>
-            <li><a href="circle-reveal.html">Circle Reveal</a></li>
-            <li><a href="phone-wall.html">Phone Wall</a></li>
-            <li><a href="element-transitions.html">Element Transitions</a></li>
-            <li><a href="basic-elements.html">Basic Elements</a></li>
-            <li><a href="card-shuffle.html">Shuffle</a></li>
-            <li><a href="postcards.html">Postcards</a></li>
-          </ul>
-        </div>
-      </li>
-    </ul>
-  </li>
-  <li><a class="waves-effect waves-teal" href="blog.html">Blog</a></li>
-  <li><a class="waves-effect waves-teal active" href="team.html">Team</a></li>
-  <li><a class="waves-effect waves-teal" href="docs/about.html">Docs</a></li>
-  <li><a class="waves-effect waves-teal" href="#">Buy Now!</a></li>
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="#!">PADI课程</a></li>
+  <li><a href="#!">PSAI课程</a></li>
+</ul>
+<ul id="dropdown2" class="dropdown-content">
+  <li><a href="#!">船宿行程</a></li>
+  <li><a href="#!">度假行程</a></li>
+</ul>
+<ul id="dropdown2" class="dropdown-content">
+  <li><a href="#!">入门装备</a></li>
+  <li><a href="#!">进阶装备</a></li>
 </ul>
 
-
-
-<!-- <div class="navbar navbar-default navbar-fixed-top" id="navbar" role="navigation">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper">
       <a class="navbar-brand" href="/">
-        <img src='<%= image_url 'logo.png' %>' ></a>
+        <img src='<%= image_url 'logow.png' %>' ></a>
 
-    </div>
-    <div class="navbar-collapse collapse navbar-responsive-collapse">
-      <ul class="nav navbar-nav">
-        <li class="dropdown">
-          <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">课程
-            <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="javascript:void(0)">PADI 课程</a></li>
-            <li><a href="javascript:void(0)">PSAI 课程</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">行程
-            <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="javascript:void(0)">船宿  行程</a></li>
-            <li><a href="javascript:void(0)">度假  行程</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">装备
-            <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="javascript:void(0)">入门  装备</a></li>
-            <li><a href="javascript:void(0)">进阶  装备</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left">
-        <div class="form-group">
-          <input type="text" class="form-control col-md-8" placeholder="搜索...">
-        </div>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
+      <!-- <a href="#!" class="brand-logo">潜在世界</a> -->
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#!">关于我们</a></li>
+        <li><a href="#!">搜索</a></li>
+        <!-- Dropdown Trigger -->
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">课程<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown2">行程<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown3">装备<i class="material-icons right">arrow_drop_down</i></a></li>
         <li>
           <%= link_to cart_path do  %>
              购物车 <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.products.count %> )
           <% end %>
         </li>
-
         <% if !current_user %>
           <li><%= link_to("注册", new_user_registration_path) %> </li>
           <li>
@@ -117,21 +45,21 @@
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-                <% if current_user.admin? %>
-                <li>
-                  <%= link_to("Admin 选单", admin_products_path ) %>
-                </li>
-                <% end %>
-
-                <li>
-                  <%= link_to("个人订单列表", account_orders_path ) %>
-                </li>
-
-                <li>
-                  <%= link_to destroy_user_session_path, method: :delete do %>
-                    <i class="fa fa-sign-out"> 登出</i>
+                  <% if current_user.admin? %>
+                  <li>
+                    <%= link_to("Admin 选单", admin_products_path ) %>
+                  </li>
                   <% end %>
-                </li>
+
+                  <li>
+                    <%= link_to("个人订单列表", account_orders_path ) %>
+                  </li>
+
+                  <li>
+                    <%= link_to destroy_user_session_path, method: :delete do %>
+                      <i class="fa fa-sign-out"> 登出</i>
+                    <% end %>
+                  </li>
             </ul>
           </li>
         <% end %>
@@ -139,67 +67,5 @@
 
       </ul>
     </div>
-  </div>
-</div> -->
-
-
-
-<!-- <nav class="navbar navbar-default" role="navigation">
-    <div class="container-fluid">
-
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/"><img src='<%= image_url 'logo.png' %>' >潜在世界</a>
-        </div>
-
-
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-              <li>
-                <%= link_to products_path do %>
-                   商品列表 <i class="fa fa-gift" aria-hidden="true"></i>
-                <% end %>
-              </li>
-               <li>
-                 <%= link_to cart_path do  %>
-                    购物车 <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.products.count %> )
-                 <% end %>
-               </li>
-
-                <% if !current_user %>
-                  <li><%= link_to("注册", new_user_registration_path) %> </li>
-                  <li>
-                    <%= link_to new_user_session_path do %>
-                      <i class="fa fa-sign-in"> 登入</i>
-                    <% end %>
-                  </li>
-                <% else %>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        Hi!, <%= current_user.email %>
-                        <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <% if current_user.admin? %>
-                        <li>
-                          <%= link_to("Admin 选单", admin_products_path ) %>
-                        </li>
-                        <% end %>
-
-                        <li>
-                          <%= link_to("个人订单列表", account_orders_path ) %>
-                        </li>
-
-                        <li>
-                          <%= link_to destroy_user_session_path, method: :delete do %>
-                            <i class="fa fa-sign-out"> 登出</i>
-                          <% end %>
-                        </li>
-                    </ul>
-                  </li>
-                <% end %>
-            </ul>
-        </div>
-
-    </div>
-
-</nav> -->
+  </nav>
+</div>
