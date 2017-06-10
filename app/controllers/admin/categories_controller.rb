@@ -5,7 +5,7 @@ class Admin::CategoriesController < ApplicationController
   before_action :admin_required
 
   def index
-    @categories = Category.all
+    @categories = Category.all.order("id ASC")
   end
 
   def new

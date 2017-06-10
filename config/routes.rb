@@ -47,6 +47,7 @@ Rails.application.routes.draw do
       end
     end
     resources :categories
+    resources :category_groups
   end
 
   root "welcome#index"
