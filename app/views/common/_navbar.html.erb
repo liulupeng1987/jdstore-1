@@ -1,71 +1,68 @@
+<!-- Navbar -->
 
-<ul id="dropdown1" class="dropdown-content">
-  <li><a href="#!">PADI课程</a></li>
-  <li><a href="#!">PSAI课程</a></li>
-</ul>
-<ul id="dropdown2" class="dropdown-content">
-  <li><a href="#!">船宿行程</a></li>
-  <li><a href="#!">度假行程</a></li>
-</ul>
-<ul id="dropdown3" class="dropdown-content">
-  <li><a href="#!">入门装备</a></li>
-  <li><a href="#!">进阶装备</a></li>
-</ul>
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a href="#!">PADI课程</a></li>
+    <li><a href="#!">PSAI课程</a></li>
+  </ul>
+  <ul id="dropdown2" class="dropdown-content">
+    <li><a href="#!">船宿行程</a></li>
+    <li><a href="#!">度假行程</a></li>
+  </ul>
+  <ul id="dropdown3" class="dropdown-content">
+    <li><a href="#!">入门装备</a></li>
+    <li><a href="#!">进阶装备</a></li>
+  </ul>
+<nav class="navbar navbar-solid-transition">
+  <div class="nav-wrapper">
+    <a class="navbar-brand" href="/">
+      <img src='<%= image_url 'logow.png' %>' ></a>
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
 
-<div class="navbar-fixed">
-  <nav>
-    <div class="nav-wrapper">
-      <a class="navbar-brand" href="/">
-        <img src='<%= image_url 'logow.png' %>' ></a>
 
-      <!-- <a href="#!" class="brand-logo">潜在世界</a> -->
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#!">关于我们</a></li>
-        <li><a href="#!">搜索</a></li>
-        <!-- Dropdown Trigger -->
-        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">课程<i class="material-icons right">arrow_drop_down</i></a></li>
-        <li><a class="dropdown-button" href="#!" data-activates="dropdown2">行程<i class="material-icons right">arrow_drop_down</i></a></li>
-        <li><a class="dropdown-button" href="#!" data-activates="dropdown3">装备<i class="material-icons right">arrow_drop_down</i></a></li>
+      <!-- Dropdown Trigger -->
+
+      </li>
+      <% if !current_user %>
+        <li><%= link_to("注册", new_user_registration_path) %> </li>
         <li>
-          <%= link_to cart_path do  %>
-             购物车 <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.products.count %> )
+          <%= link_to new_user_session_path do %>
+            <i class="fa fa-sign-in"> 登入</i>
           <% end %>
         </li>
-        <% if !current_user %>
-          <li><%= link_to("注册", new_user_registration_path) %> </li>
-          <li>
-            <%= link_to new_user_session_path do %>
-              <i class="fa fa-sign-in"> 登入</i>
-            <% end %>
-          </li>
-        <% else %>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                Hi!, <%= current_user.email %>
-                <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-                  <% if current_user.admin? %>
-                  <li>
-                    <%= link_to("Admin 选单", admin_products_path ) %>
-                  </li>
+      <% else %>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Hi!, <%= current_user.email %>
+              <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+                <% if current_user.admin? %>
+                <li>
+                  <%= link_to("Admin 选单", admin_products_path ) %>
+                </li>
+                <% end %>
+
+                <li>
+                  <%= link_to("个人订单列表", account_orders_path ) %>
+                </li>
+
+                <li>
+                  <%= link_to destroy_user_session_path, method: :delete do %>
+                    <i class="fa fa-sign-out"> 登出</i>
                   <% end %>
+                </li>
+          </ul>
+        </li>
+      <% end %>
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">课程<i class="material-icons right">arrow_drop_down</i></a></li>
+<li><a class="dropdown-button" href="#!" data-activates="dropdown2">行程<i class="material-icons right">arrow_drop_down</i></a></li>
+<li><a class="dropdown-button" href="#!" data-activates="dropdown3">装备<i class="material-icons right">arrow_drop_down</i></a></li>
+<li>
+<%= link_to cart_path do  %>
+ 购物车 <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.products.count %> )
+<% end %>
+<li><a href="#!">关于我们</a></li>
 
-                  <li>
-                    <%= link_to("个人订单列表", account_orders_path ) %>
-                  </li>
 
-                  <li>
-                    <%= link_to destroy_user_session_path, method: :delete do %>
-                      <i class="fa fa-sign-out"> 登出</i>
-                    <% end %>
-                  </li>
-            </ul>
-          </li>
-        <% end %>
-
-
-      </ul>
-    </div>
-  </nav>
-</div>
+  </div>
+</nav>
