@@ -6,10 +6,12 @@ class Admin::CategoriesController < ApplicationController
 
   def index
     @categories = Category.all.order("id ASC")
+    @category_groups = CategoryGroup.all
   end
 
   def new
     @category = Category.new
+    @category_groups = CategoryGroup.all
   end
 
   def create
@@ -22,7 +24,15 @@ class Admin::CategoriesController < ApplicationController
     end
   end
 
+  def edit
+    @category = Category.find(params[:id])
+    # 所屬的大分類
+    @category_groups = CategoryGroup.all
+    # @category_groups = CategoryGroup.all.map { |g| [g.name, g.id] }
+  end
+
   def update
+    @category = Category.find(params[:id])
     if @category.update(category_params)
       flash[:notice] = "分类#{@category.name}已更新"
       redirect_to admin_categories_path
@@ -45,6 +55,6 @@ class Admin::CategoriesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def category_params
-    params.require(:category).permit(:name)
+    params.require(:category).permit(:name, :category_group_id)
   end
 end

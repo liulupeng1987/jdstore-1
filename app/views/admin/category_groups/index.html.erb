@@ -1,3 +1,27 @@
 <h2> 一级分类列表 </h2>
 
 <%= link_to("新增", new_admin_category_group_path, class: "btn btn-raised btn-success pull-right") %>
+<div class="panel panel-default">
+  <table class="table table-shopping">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th width="60%">名称</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @category_groups.each do |category_group| %>
+      <tr>
+        <td><%= category_group.id %></td>
+        <td><%= category_group.name %></td>
+        <td>
+          <%= link_to("编辑", edit_admin_category_group_path(category_group)) %>
+          <%= link_to("删除", admin_category_group_path(category_group), :method => :delete, :data => { :confirm => "Are you sure?" }) %>
+
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
