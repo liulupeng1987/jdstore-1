@@ -16,22 +16,12 @@
 //= require jquery-ui
 //= require materialize-sprockets
 //= require ckeditor/init
-
+//= startup
 //carousel 设置
 
 $(document).ready(function(){
-  $('.carousel').carousel();
-});
-// Pause slider
-$('.slider').slider('pause');
-// Start slider
-$('.slider').slider('start');
-// Next slide
-$('.slider').slider('next');
-// Previous slide
-$('.slider').slider('prev');
-
-
+    $('.carousel').carousel();
+  });
 // Next slide
 $('.carousel').carousel('next');
 $('.carousel').carousel('next', 3); // Move next n times.
@@ -51,6 +41,8 @@ $('.pushpin-demo-nav').each(function() {
 });
 
  $('.carousel.carousel-slider').carousel({fullWidth: true});
+
+
 // 图片自适应大小支持代码块
 // 在product/show.html.erb的页面中，对img图片用这一格式进行校正
 // 让图片在大于div宽度时自动缩小不而溢出，确保版面的公正和美观
