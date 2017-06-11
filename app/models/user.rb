@@ -8,6 +8,6 @@ class User < ApplicationRecord
   has_many :reviews, dependent: :destroy              #商品留言关系，dependent: :destroy表示联级删除
 
   def admin?
-    (role == "admin")
+    is_admin
   end
 end
