@@ -15,6 +15,12 @@ class ProductsController < ApplicationController
       Product.where(:category_id => 5)
     when '进阶装备'
       Product.where(:category_id => 6)
+    when '课程'
+      Product.where(:category_id => [1, 2])
+    when '行程'
+      Product.where(:category_id => [3, 4])
+    when '装备'
+      Product.where(:category_id => [5, 6])
     else
       @products = Product.rank(:row_order).all
     end

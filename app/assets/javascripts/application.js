@@ -21,7 +21,11 @@
 
 $(document).ready(function(){
     $('.carousel').carousel();
+    $(".button-collapse").sideNav();
   });
+
+
+
 // Next slide
 $('.carousel').carousel('next');
 $('.carousel').carousel('next', 3); // Move next n times.
