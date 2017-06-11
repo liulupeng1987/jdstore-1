@@ -75,7 +75,7 @@ class Admin::ProductsController < ApplicationController
   end
 
   def reorder
-    @product = Product.find_by_friendly_id!(params[:id])
+    @product = Product.find(params[:id])
     @product.row_order_position = params[:position]
     @product.save!
 
