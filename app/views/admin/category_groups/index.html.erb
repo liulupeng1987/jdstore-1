@@ -14,7 +14,7 @@
       <% @category_groups.each do |category_group| %>
       <tr>
         <td><%= category_group.id %></td>
-        <td><%= category_group.name %></td>
+        <td><%= link_to(category_group.name, admin_category_group_path(category_group)) %></td>
         <td>
           <%= link_to("编辑", edit_admin_category_group_path(category_group)) %>
           <%= link_to("删除", admin_category_group_path(category_group), :method => :delete, :data => { :confirm => "Are you sure?" }) %>

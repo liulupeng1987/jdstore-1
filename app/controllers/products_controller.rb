@@ -1,7 +1,23 @@
 class ProductsController < ApplicationController
 
   def index
-    @products = Product.rank(:row_order).all
+
+    @products = case params[:category]
+    when 'PADI课程'
+      Product.where(:category_id => 1)
+    when 'PSAI课程'
+      Product.where(:category_id => 2)
+    when '船宿行程'
+      Product.where(:category_id => 3)
+    when '度假行程'
+      Product.where(:category_id => 4)
+    when '入门装备'
+      Product.where(:category_id => 5)
+    when '进阶装备'
+      Product.where(:category_id => 6)
+    else
+      @products = Product.rank(:row_order).all
+    end
   end
 
   def show
